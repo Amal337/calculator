@@ -106,11 +106,15 @@ keys.addEventListener('click', (event) => {
 
 
 
-//     // click sound event to all buttons
-// const sound = document.querySelectorAll('button')
-//       sound.addEventListener('click', playAudio);
+ // click sound event to all buttons
 
-// function playAudio(){
-//     const tick = new Audio('sounds/click.mp3');
-//     tick.play();
-// }
+function playAudio(){
+    const tick = new Audio('sounds/click.mp3');
+    tick.play();
+}
+
+
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+  button.addEventListener('click', playAudio)
+});
